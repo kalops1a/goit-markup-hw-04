@@ -74,18 +74,23 @@ main {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
-
-/* Header */
 
 .container {
     margin-left: auto;
     margin-right: auto;
     padding-left: 15px;
     padding-right: 15px;
-    width: 1158px;
+    width: 1128px;
 
 }
+.section{
+    width: 1440px;
+}
+/* Header */
+
+
 
 .page-header {
     border-bottom: 1px solid #e7e9fc
@@ -110,8 +115,8 @@ main {
     text-transform: uppercase;
     color: #4D5AE5;
     margin-right: 76px;
-    
-    
+
+
 }
 
 .logo1-item {
@@ -132,7 +137,7 @@ main {
 
     display: flex;
     gap: 40px;
-    
+
 }
 
 .nav-list-item {
@@ -145,7 +150,35 @@ main {
     line-height: 1.5;
     /* 150% */
     letter-spacing: 0.02em;
-    color: #2E2F42
+    color: #2E2F42;
+    position: relative;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+
+}
+
+
+
+.nav-list-item:hover {
+    color: #404BBF;
+    
+}
+
+.nav-list-item::after {
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: inline-block;
+    content: "";
+    width: 48px;
+    height: 4px;
+    border-radius: 2px;
+}
+.nav-list-item:active::after {
+    
+    background-color: #404BBF;
+    
 }
 
 
@@ -163,8 +196,10 @@ main {
     color: #434455;
     line-height: 1.5;
     letter-spacing: 0.02em;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    }
 
-}
+
 
 .address-item:hover,
 .address-item:focus {
@@ -178,13 +213,18 @@ main {
 .title-section {
     padding: 188px 0;
 }
+
 .title-section-container {
-   
+    width:1440px;
+    background-image: linear-gradient(to bottom,
+        rgba(46, 47, 66, 0.70),
+        rgba(46, 47, 66, 0.70)), url(/images/people-office1.jpg);
+    background-size:cover;
     background-color: #2E2F42;
     height: 600px;
     display: flex;
     flex-direction: column;
-    
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     gap: 48px;
@@ -192,6 +232,7 @@ main {
 
 
 .main-title {
+    
     height: 120px;
     max-width: 496px;
     color: #FFF;
@@ -231,27 +272,47 @@ main {
 
 /* Advantages section */
 
-
+.advantages-container {
+    
+    display: flex;
+    justify-content: space-between;
+}
 
 .advantages-section {
     background-color: #FFF;
-    padding: 120px 0
+    padding: 120px 0;
 }
 
 .advantages-list {
     display: flex;
     gap: 24px;
+    width: 100%;
+    height:100%;
 }
 
-.advantages-context {
-    height: 104px;
-    margin-top: 8px;
-}
+
 
 .advantages-feature {
     width: calc((100% - 72px) / 4);
+    display: flex;
+    flex-direction: column;
 }
 
+.icon-box{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    border-radius: 4px;
+    border: 1px solid #8E8F99;
+    background-color: #F4F4FD;
+    height: 112px;
+}
+
+.advantages-feature-icon {
+    width: 64px;
+    height: 64px;
+}
 .advantages-item {
     color: #2E2F42;
     font-family: Roboto;
@@ -261,32 +322,38 @@ main {
     line-height: 1.2;
     /* 120% */
     letter-spacing: 0.02em;
-    margin-bottom: 8px;
+    margin-top: 8px;
+    width: 264px;
 }
 
 .advantages-context {
+    height: 104px;
+    margin-top: 8px;
     color: #434455;
     font-family: Roboto;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: 1.5;
-    /* 150% */
+    width: 264px;
     letter-spacing: 0.02em;
 }
 
 /* Our team section */
 
 .team-info-container {
-    background-color: #F4F4FD;
-    height: 732px;
+background-color: #F4F4FD;
+    height: 780px;
+
 }
-.our-team-section{
+
+.our-team-section {
+    
     padding: 120px 0
 }
 
 .our-team-title {
-    
+padding-top: 120px;
     color: #2E2F42;
     text-align: center;
     font-family: Roboto;
@@ -301,13 +368,15 @@ main {
 
 .team-element-list {
     display: flex;
-    padding-top: 72px;
+    
     gap: 24px;
     justify-content: center;
 }
+
 .name-role-box {
     padding: 32px 0;
 }
+
 .team-element {
     background-color: #FFF;
     border-radius: 0px 0px 4px 4px;
@@ -318,7 +387,7 @@ main {
 }
 
 .team-member {
-  
+
     color: #2E2F42;
     text-align: center;
     padding-top: 32px;
@@ -380,13 +449,15 @@ main {
 .portfolio-block {
     border: 1px solid #E7E9FC;
     width: calc((100% - 48px) / 3);
-    
+
 }
-.service-type-box{
+
+.service-type-box {
     padding: 32px 16px;
     border: 1px solid #e7e9fc;
     border-top: none;
 }
+
 .portfolio-item {
     padding-left: 16px;
     padding-right: 16px;
@@ -425,6 +496,7 @@ main {
     height: 312px;
     padding: 100px 0;
 }
+
 .footer-logo {
     display: inline-block;
     margin-bottom: 16px;
