@@ -407,11 +407,11 @@ padding-top: 120px;
     
     fill: #f4f4fd;
 }
-.team-icon-link:hover{
+.team-icon-link:hover {
     background-color: #404BBF;
 }
 
-.team-icon-link:active{
+.team-icon-link:active, .team-icon-link:focus {
     background-color: #404BBF;
 }
 
@@ -646,6 +646,6 @@ gap: 16px;
 }
 
 
-.media-list-blue-circle:active {
+.media-list-blue-circle:active, .media-list-blue-circle:focus {
     background-color: #31d0aa;
 }
