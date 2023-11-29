@@ -152,7 +152,7 @@ main {
     line-height: 1.5;
     /* 150% */
     letter-spacing: 0.02em;
-    color: #2E2F42;
+    
     position: relative;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 
@@ -180,11 +180,7 @@ main {
     height: 4px;
     border-radius: 2px;
 }
-.nav-list-item:active::after {
-    
-    background-color: #404BBF;
-    
-}
+
 
 
 .address-main-list {
@@ -416,6 +412,10 @@ padding-top: 120px;
 }
 .team-icon-link:focus {
     background-color: #404BBF;
+
+}
+.team-icon-link:active{
+    background-color: #404BBF;
 }
 
 .team-element {
@@ -511,7 +511,7 @@ padding-top: 120px;
     position:relative;
     overflow: hidden;
 }
-.positioning-box:hover .overlay-text{
+.portfolio-block:hover .overlay-text{
     transform: translateY(0%);
 
 }
@@ -648,5 +648,8 @@ gap: 16px;
     background-color: #31D0AA;
 }
 .media-list-blue-circle:focus {
+    background-color: #31d0aa;
+}
+.media-list-blue-circle:active {
     background-color: #31d0aa;
 }
